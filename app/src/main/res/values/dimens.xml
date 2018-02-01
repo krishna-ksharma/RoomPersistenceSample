@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_big_margin">24dp</dimen>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="standard_half_margin">8dp</dimen>
+    <!-- As default touch target size is 48dp -->
+    <dimen name="footer_height">48dp</dimen>
+</resources>

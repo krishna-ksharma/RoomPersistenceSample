@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AndroidRoom</string>
+    <string name="text_logo">LOGO</string>
+    <string name="text_support">Contact support</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_login">Login</string>
+    <string name="text_create_account">Create account</string>
+    <string name="account_created">Account has been created successfully.</string>
+    <string name="email_taken">Email already taken.</string>
+    <string name="login_success">Successfully logged in.</string>
+    <string name="ok">OK</string>
+    <string name="login_failed">Please enter valid email and password.</string>
+    <string name="email_not_valid">Please enter valid email.</string>
+    <string name="password_hint">Enter a password which contains at least: 8 characters; 1 uppercase letter; 1 lowercase letter; 1 digit</string>
+</resources>

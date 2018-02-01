@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewHandler"
+            type="com.aid.trade.handler.LoginViewHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.aid.trade.viewmodel.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPercentage"
+                    android:minHeight="@dimen/footer_height" />
+
+                <com.aid.trade.view.widget.TextImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/text_logo"
+                    app:tiv_text="@string/text_logo"
+                    app:tiv_text_color="@color/colorWhite"
+                    app:tiv_text_size="48sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPercentage"
+                    android:minHeight="@dimen/footer_height" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:orientation="vertical">
+
+                    <EditText
+                        style="@style/EditTextStyleWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_email"
+                        android:inputType="textEmailAddress"
+                        android:text="@={viewModel.email}"
+                        android:textColorHint="@{viewModel.emailTextColorHint}"
+                        app:onFocusChangeListener="@{viewHandler.emailFocusChangeListener}" />
+
+                    <EditText
+                        style="@style/EditTextStyleWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard_half_margin"
+                        android:hint="@string/text_password"
+                        android:inputType="textPassword"
+                        android:text="@={viewModel.password}"
+                        android:textColorHint="@{viewModel.passwordTextColorHint}"
+                        app:onFocusChangeListener="@{viewHandler.passwordFocusChangeListener}" />
+
+                    <Button
+                        style="@style/AidButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/standard_big_margin"
+                        android:background="@drawable/selector_button_login"
+                        android:onClick="@{viewHandler.onLoginClicked}"
+                        android:text="@string/text_login" />
+
+                    <Button
+                        android:id="@+id/signUp"
+                        style="@style/AidButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/standard_margin"
+                        android:background="@drawable/selector_button_create_account"
+                        android:onClick="@{viewHandler.onCreateAccountClicked}"
+                        android:text="@string/text_create_account" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/space3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPercentage"
+                    android:gravity="bottom|center_horizontal"
+                    android:minHeight="@dimen/footer_height">
+
+                    <Button
+                        style="@style/AidLabelButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_support" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

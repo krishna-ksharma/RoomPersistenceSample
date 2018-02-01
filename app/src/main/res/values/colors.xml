@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#479fdc</color>
+    <color name="colorPrimaryDark">#479fdc</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite85Percent">#D9FFFFFF</color>
+    <color name="colorButton">#298fa5</color>
+    <color name="colorWhite60Percent">#CCF2FF</color>
+    <color name="colorCreateAccountButtonPressed">#107387</color>
+    <color name="colorLoginButtonPressed">#188594</color>
+    <!-- It is just for testing purpose, to check the equal heights of spaces -->
+    <!-- <color name="colorPercentage">@android:color/transparent</color> -->
+    <color name="colorPercentage">@android:color/transparent</color>
+
+</resources>
